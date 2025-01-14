@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["username"];
     $password = $_POST["pass"];
 
-    echo $username = $conn->real_escape_string($username);
-    echo $password = $conn->real_escape_string($password);
+    $username = $conn->real_escape_string($username);
+    $password = $conn->real_escape_string($password);
 
     $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
 
